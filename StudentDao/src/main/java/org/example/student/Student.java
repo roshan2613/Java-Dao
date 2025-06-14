@@ -7,20 +7,16 @@ public class Student {
     String lastName;
     int rollNumber;
     String[] arrSubjects;
+    int rank;
 
-    public String[] getArrSubjects() {
-        return arrSubjects;
-    }
+   
 
-    public void setArrSubjects(String[] arrSubjects) {
-        this.arrSubjects = arrSubjects;
-    }
-
-    public Student(String firstName, String lastName, int rollNumber, String[] arrSubjects ) {
+    public Student(String firstName, String lastName, int rollNumber, String[] arrSubjects, int rank ) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.rollNumber = rollNumber;
         this.arrSubjects = arrSubjects;
+        this.rank = rank;
     }
 
     public String getFirstName() {
@@ -47,6 +43,21 @@ public class Student {
         this.rollNumber = rollNumber;
     }
 
+     public String[] getArrSubjects() {
+        return arrSubjects;
+    }
+
+    public void setArrSubjects(String[] arrSubjects) {
+        this.arrSubjects = arrSubjects;
+    }
+
+    public int getRank(){
+        return this.rank;
+    }
+
+public void setRank(int rank) {
+        this.rank = rank;
+    }
     @Override
     public String toString() {
         return "Student{" +
@@ -54,6 +65,7 @@ public class Student {
                 ", lastName='" + lastName + '\'' +
                 ", rollNumber=" + rollNumber +
                 ", arrSubjects=" + Arrays.toString(arrSubjects) +
+                ", rank=" + rank+
                 '}';
     }
 }
