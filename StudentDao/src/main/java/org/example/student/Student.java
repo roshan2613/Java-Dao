@@ -1,14 +1,26 @@
 package org.example.student;
 
+import java.util.Arrays;
+
 public class Student {
     String firstName;
     String lastName;
     int rollNumber;
+    String[] arrSubjects;
 
-    public Student(String firstName, String lastName, int rollNumber) {
+    public String[] getArrSubjects() {
+        return arrSubjects;
+    }
+
+    public void setArrSubjects(String[] arrSubjects) {
+        this.arrSubjects = arrSubjects;
+    }
+
+    public Student(String firstName, String lastName, int rollNumber, String[] arrSubjects ) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.rollNumber = rollNumber;
+        this.arrSubjects = arrSubjects;
     }
 
     public String getFirstName() {
@@ -40,7 +52,8 @@ public class Student {
         return "Student{" +
                 "firstName='" + firstName + '\'' +
                 ", lastName='" + lastName + '\'' +
-                ", rollNumber='" + rollNumber + '\'' +
+                ", rollNumber=" + rollNumber +
+                ", arrSubjects=" + Arrays.toString(arrSubjects) +
                 '}';
     }
 }
